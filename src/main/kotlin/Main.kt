@@ -1,23 +1,25 @@
 import kotlin.io.*
 
 fun main(args: Array<String>) {
-    var x: Int = 1
-    var y: Int = 2
+    var x: Int = 2
+    var y: String
 
-    if(x>y)
-        println("$x é maior que $y")
+    //estrutura para atribuir resultados de uma condicional a uma variável diretamente
+    y = if(x==1)
+        "um"
+    else if (x==2)
+        "dois"
     else
-        println("$y é maior que $x")
+        "maior que dois"
 
-    //diferente do Java, não há switch case e sim when
-
-    when(x){
-        1-> {
-            println("um")
-            println("my pain is constant and sharp")
-        }
-        2-> println("dois")
-        3-> println("tres")
-        else-> println("maior que tres")
+    //estrutura para atribuir resultados de um switch a uma variável diretamente
+    y = when(x){
+        1-> "um"
+        2-> "dois"
+        else -> "maior que dois"
     }
+
+    println(y)
+
+
 }
