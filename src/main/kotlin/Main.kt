@@ -1,25 +1,14 @@
 import kotlin.io.*
 
 fun main(args: Array<String>) {
-    var x: Int = 2
-    var y: String
 
-    //estrutura para atribuir resultados de uma condicional a uma variável diretamente
-    y = if(x==1)
-        "um"
-    else if (x==2)
-        "dois"
-    else
-        "maior que dois"
+    for(i in 10 downTo 0 step(2))
+        println(i)
 
-    //estrutura para atribuir resultados de um switch a uma variável diretamente
-    y = when(x){
-        1-> "um"
-        2-> "dois"
-        else -> "maior que dois"
-    }
+    var i = 1
 
-    println(y)
-
-
+    do{
+        println(i)
+        i++
+    }while (i!=11)
 }
