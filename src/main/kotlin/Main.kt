@@ -2,31 +2,39 @@ import kotlin.io.*
 
 fun main(args: Array<String>) {
 
-    //Exercicios
+    //use mutableListOf para lista mutávies, e ListOf para lista não mutávies
+    val lista = mutableListOf(
+        "Kotlin",
+        "Java",
+        "JS",
+        "Python",
+        "C",
+    )
 
-//    Ex1
-    /*var x: Int = 10
-    var y: Int = 20
+    //usado para adicionar elementos a lista mutável
+    lista.add("C++")
 
-    println("A soma de $x e $y é igual a ${x+y}")*/
+    //the virgin
+    for (i in 0..lista.size-1)
+        println(lista[i])
+    //the chad
+    for (i in lista)
+        println(i)
+    //the thad
+    lista.forEach{lang->
+        println(lang)
+    }
+    //the lad
+    lista.forEachIndexed {indice, linguagem ->
+        println("$indice -> $linguagem")
+    }
 
-//    Ex2
-    /*var nome: String = "Manoel"
-    println("Olá $nome!")*/
+    //criar uma lista filtrada
+    val listaFiltrada = lista.filter {
+        it.contains("C")
+    }
 
-//    Ex3
-//    for (i in 1..10)
-//        println(i)
-//    Ex4
-/*    var scan: String = readLine() ?: ""
-    var x: Int = scan.toIntOrNull() ?: 0*/
-
-//    if(x > 0)
-//        println("$x é positivo!")
-//    else if(x == 0)
-//        println("$x é zero!")
-//    else
-//        println("$x é negativo!")
-//    println(if (x>0) "Positivo" else if(x==0)"Zero" else "Negativo")
-
+    listaFiltrada.forEach{lang->
+        println(lang)
+    }
 }
